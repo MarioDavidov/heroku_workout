@@ -1,0 +1,54 @@
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background: #F0F8FF;
+    margin-bottom: 155px;
+}
+
+.workout-wrapper{
+    border: 2px solid #996633;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: #B0E0E6;
+    padding: 12px;
+    margin: 16px;
+}
+.workout-card{
+    border-right: 2px dotted #996633;
+    margin-right: 3px;
+}
+.buttons-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 3px;
+}
+
+.delete{
+    background: red !important;
+}
+.delete:hover{
+    background: darkred !important;
+
+}
+.details{
+    background: blue !important;
+}
+.details:hover{
+    background: darkblue !important;
+}
+
+.edit{
+    background: brown !important;
+}
+
+.edit:hover{
+    background: saddlebrown !important;
+}
+.form-out{
+    font-size: 18px;
+    color: #9b59b6;
+}

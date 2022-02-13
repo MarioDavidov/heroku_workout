@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/static/workouts.css">
+{#<link rel="stylesheet" href="/static/Public_part.css">#}
+
+{% extends 'home/home_for_users.html' %}
+
+{% include 'shared/site_navigation.html' %}
+
+<body>
+{% block site_content %}
+    <article class="header-wrapper">
+        <h1>WORKOUTS</h1>
+    </article>
+
+
+        {% if not workouts_user %}
+            <article class="header-wrapper">
+                <h1>NO WORKOUTS TO SHOW</h1>
+                <a href="{%  url 'create_workout' %}" class="create-wo-btn">Create workout</a>
+             </article>
+        {% endif %}
+
+    <main class="main">
+        {% for work in workouts_user %}
+
+            <section class="workout-wrapper">
+                <section class="workout-card">
+                        <h2>{{ work.date }}</h2>
+                    <p>Tittle: <span class="form-out">{{ work.tittle }}</span></p>
+                    <p>Exercise:<span class="form-out"> {{ work.first_exercise }}</span></p>
+                    <p>Exercise:<span class="form-out"> {{ work.second_exercise }}</span></p>
+                    <p>Exercise:<span class="form-out"> {{ work.third_exercise }}</span></p>
+                    <p>Exercise:<span class="form-out"> {{ work.fourth_exercise }}</span></p>
+                    <p>Exercise:<span class="form-out"> {{ work.fifth_exercise }}</span></p>
+                </section>
+                <section class="buttons-wrapper">
+                        <a href="{% url 'edit_workout' work.id %}" class="create-wo-btn edit">Edit workout</a>
+                        <a href="{% url 'details_workout' work.id %}" class="create-wo-btn details">Workout details</a>
+                        <a href="{% url 'delete_workout' work.id %}" class="create-wo-btn delete">Delete workout</a>
+                        <a href="{%  url 'create_workout' %}" class="create-wo-btn">Create workout</a>
+                </section>
+            </section>
+
+        {% endfor %}
+    </main>
+ {% endblock %}
+</body>

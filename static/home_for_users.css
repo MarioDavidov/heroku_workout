@@ -1,0 +1,132 @@
+.content-wrapp{
+    position: relative;
+    min-height: 100vh;
+    background: #F0F8FF;
+}
+.main-body{
+    background: #F0F8FF;
+    padding-bottom: 2.5rem;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+.header-wrapper{
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background: #F0F8FF;
+}
+.home-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: normal;
+    background: #B0E0E6;
+    border: 2px solid #996633;
+    border-radius: 4px;
+    padding: 35px 18px;
+
+}
+.profile-pic-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border-right: 2px dotted #996633;
+}
+.btn-side{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.img-wrapper{
+    width: 160px;
+    height: 170px;
+    border: 2px solid #996633;
+    border-radius: 4px;
+    margin: 5px;
+    margin-bottom: 15px;
+
+}
+.img-wrapper img{
+    width: 100%;
+    height: 100%;
+}
+.form-wrapper{
+    background: #B0E0E6;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #996633;
+    border-radius: 4px;
+}
+.inside-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.form-btn-wrapper{
+    align-self: center;
+}
+.profile-btn{
+    margin-left: -50px;
+    background: #4CAF50;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+    color: white;
+    font-family: 'cursive', "Berlin Sans FB";
+    font-size: 16px;;
+}
+.profile-btn:hover{
+    background: #059862;
+}
+.button-wrapper{
+    display: flex;
+    flex-direction: column;
+
+
+}
+.create-wo-btn{
+    background: #4CAF50;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+    color: white;
+    font-family: 'cursive', "Berlin Sans FB";
+    font-size: 16px;
+    padding: 6px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 10px;
+
+}
+.create-wo-btn:hover{
+    background: #059862;
+}
+.margin-for-btn{
+    margin-top: 5px;
+}
+.its-funny-but-is-main-wrapper{
+    display: flex;
+    justify-content: center;
+    /*margin-bottom: 155px;*/
+}
+.stats-side{
+    border-bottom: 2px dotted #996633;
+    margin-bottom: 12px;
+}
+.profile-stats{
+    color: black;
+}
+.inputalign{
+    position: relative;
+    left: 22px;
+}
+
+

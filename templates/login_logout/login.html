@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Workout tracker</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    <link rel="stylesheet" href="{% static 'general.css' %}">
+
+</head>
+
+<body>
+{% include 'shared/register_login_navigation.html' %}
+
+<section class="register-section">
+    <article class="register-header">
+        <h4>LOGIN</h4>
+    </article>
+
+    <section class="form-section">
+
+        <form method="post" action="{% url 'login_user' %}">
+            <p>Username:</p> {{login_form.username}}
+            <p>Password:</p> {{login_form.password}}
+            {% csrf_token %}
+                <article class="button-wrapper">
+                    <button type="submit" class="button">Login</button>
+                </article>
+            </form>
+        <article class="login-icon-wrapper">
+            <img src="https://cdn3.iconfinder.com/data/icons/user-interface-169/32/login-512.png" alt="error">
+        </article>
+    </section>
+
+</section>
+<section class="never_do_this_shit">
+    {% include 'shared/footer_log_reg_part.html' %}
+</section>
+</body>
+</html>

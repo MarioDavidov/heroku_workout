@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/static/create_workout.css">
+{% extends 'workouts.html' %}
+
+
+
+<body>
+{% block site_content %}
+    <script>
+        let username = document.getElementById('id_user').innerHTML = {{ profile_user.username }}
+    </script>
+        <article class="header-wrapper">
+            <h1>Create Workout</h1>
+        </article>
+
+    <section class="form-wrapper-CW">
+
+        <form class="form-CW" method="POST">
+             <article class="cw-icon">
+                <img src="https://cdn2.iconfinder.com/data/icons/outline-landing-page/100/outline4_ready-17-512.png" alt="error">
+             </article>
+            <label class="inputs" for="date">Date: {{ form.date }}</label><br>
+            <br>
+            <label class="inputs" for="title">Title: {{ form.tittle }}</label><br>
+            <br>
+            <label class="inputs" for="exercise">Exercise: {{ form.first_exercise }}</label><br>
+            <br>
+            <label class="inputs" for="exercise">Exercise: {{ form.second_exercise }}</label><br>
+            <br>
+            <label class="inputs" for="exercise">Exercise: {{ form.third_exercise }}</label><br>
+            <br>
+            <label class="inputs" for="exercise">Exercise: {{ form.fourth_exercise }}</label><br>
+            <br>
+            <label class="inputs" for="exercise">Exercise: {{ form.fifth_exercise }}</label><br>
+
+            <p id="user">User: {{ form.user }}</p>
+            <input type="submit" class="create-wo-btn" value="edit Workout">
+            <a href="{%  url 'workouts' %}" class="create-wo-btn">Go back</a>
+            {% csrf_token %}
+
+        </form>
+
+    </section>
+{% endblock %}
+</body>
+
+
