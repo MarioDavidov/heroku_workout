@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '1&j3&v_29ikg7c^5_#h390(6(z64sc!ogb4z^j235k(knym2e@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', None)
 
 ALLOWED_HOSTS = [
     'localhost',
@@ -136,3 +136,4 @@ STATICFILES_DIRS = [
 ]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = join(BASE_DIR, 'media')
+LOGIN_REDIRECT_URL = '/'
