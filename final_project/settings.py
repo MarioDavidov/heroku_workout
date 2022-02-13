@@ -25,7 +25,11 @@ SECRET_KEY = '1&j3&v_29ikg7c^5_#h390(6(z64sc!ogb4z^j235k(knym2e@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'django-workout-softuni.herokuapp.com',
+]
 
 # Application definition
 
